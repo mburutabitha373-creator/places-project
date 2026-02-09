@@ -1,65 +1,88 @@
+# Places I've Been
 
-# Places I have Been
+A website that lets you track places you’ve visited and display their details. This project demonstrates JavaScript constructors, prototype methods, arrays, and basic Test-Driven Development (TDD).
 
-A simple website to track places you have visited. Click a place name to see its details.
 
 
 ## Project Overview
 
-- Uses **JavaScript constructors** and **prototypes**  
-- Stores places in an **array**  
-- Displays details when a place is clicked  
+This app allows users to:
+
+- Create place objects using a constructor
+- Store places inside an array
+- Display formatted place details
+- Practice writing and testing business logic
+
+The project was built step-by-step using Test-Driven Development.
 
 
-## Business Logic Tests
 
+## Technologies Used
+
+- HTML  
+- JavaScript  
+- Basic DOM manipulation  
+- Github
+
+
+## Constructor stores values
+
+**Goal:** Ensure a new place object stores the correct data.
 
 ```javascript
-let trip = new Place("Nairobi", "Museum", "June", "Fun trip");
-trip.getDetails(); // "Nairobi - Museum - June - Fun trip"
+let place = new Place("Nairobi", "Museum", "June", "Fun");
+place.location;
+// Expected: "Nairobi"
 
-let trip2 = new Place("Mombasa", "Beach", "December", "Sunny trip");
-places.push(trip, trip2);
-Expected: both trips are stored and return correct details.
+ Prototype returns formatted details
+Goal: Confirm that the prototype method formats details correctly.
 
-How to Run
+place.getDetails();
+// Expected: "Nairobi - Museum - June - Fun"
+
+
+ — Places array stores objects
+Goal: Verify multiple place objects can be stored.
+
+let trip2 = new Place("Mombasa", "Beach", "December", "Sunny");
+places.push(place, trip2);
+
+places.length;
+// Expected: 2
+
+How to Run the Project
+Download or clone the project
+
 Open index.html in a browser
 
-Add a place in the input fields
+Enter place details
 
-Click a place name to see details
+View stored places
 
-GitHub Instructions
+Git Workflow Used
+After every passing test:
 
-To put this project on GitHub:
+git add .
+git commit -m "Describe passing test"
+git push
+This keeps development organized and trackable.
 
-Create a GitHub Repository
+Learning Goals
+This project helps beginners understand:
 
-Go to github.com
- → Click New Repository
+JavaScript constructors
 
-Name it places-ive-been
+Prototype methods
 
-Optionally add a description
+Arrays and object storage
 
-Upload Your Project
+DOM updates
 
-Open terminal/command prompt in your project folder
-Optional: Enable GitHub Pages
+Test-Driven Development workflow
 
-Go to your repository Settings → Pages
 
-Set the source branch to main
+License
+Free to use and modify for learning purposes.
 
-GitHub will give you a URL where your project is live
-
-Now your project is online! Share the GitHub link or the Pages URL with others.
-
-## License
-
-This project is licensed under the MIT License.
-You are free to use, copy, and modify it for learning purposes.
-
-## Author
+Author
 Tabitha Mburu
-
