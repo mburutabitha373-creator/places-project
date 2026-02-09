@@ -1,5 +1,5 @@
 
-# Places ISA've Been
+# Places I have Been
 
 A simple website to track places you have visited. Click a place name to see its details.
 
@@ -62,3 +62,4 @@ You are free to use, copy, and modify it for learning purposes.
 
 ## Author
 Tabitha Mburu
+
