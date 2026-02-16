@@ -1,9 +1,5 @@
 # Places I've Been
-
 A website that lets you track places you’ve visited and display their details. This project demonstrates JavaScript constructors, prototype methods, arrays, and basic Test-Driven Development (TDD).
-
-
-
 ## Project Overview
 
 This app allows users to:
@@ -24,7 +20,9 @@ The project was built step-by-step using Test-Driven Development.
 - Basic DOM manipulation  
 - Github
 
+## Test-Driven Development (Business Logic Tests)
 
+Each feature was tested first.
 ## Constructor stores values
 
 **Goal:** Ensure a new place object stores the correct data.
@@ -32,24 +30,22 @@ The project was built step-by-step using Test-Driven Development.
 ```javascript
 let place = new Place("Nairobi", "Museum", "June", "Fun");
 place.location;
+
 // Expected: "Nairobi"
 
  Prototype returns formatted details
 Goal: Confirm that the prototype method formats details correctly.
 
 place.getDetails();
-// Expected: "Nairobi - Museum - June - Fun"
-
+// Expected: "Nairobi - Museum - June - FunTrip"
 
  — Places array stores objects
+
+ Places array stores objects
 Goal: Verify multiple place objects can be stored.
 
 let trip2 = new Place("Mombasa", "Beach", "December", "Sunny");
-places.push(place, trip2);
-
-places.length;
-// Expected: 2
-
+places.push(place, trip ,trip2)
 How to Run the Project
 Download or clone the project
 
@@ -68,6 +64,7 @@ git push
 This keeps development organized and trackable.
 
 Learning Goals
+## Learning Goals
 This project helps beginners understand:
 
 JavaScript constructors
@@ -81,7 +78,13 @@ DOM updates
 Test-Driven Development workflow
 
 
+
 License
+
+Git commit discipline
+
+## License
+
 Free to use and modify for learning purposes.
 
 Author
