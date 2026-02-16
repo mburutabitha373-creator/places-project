@@ -40,11 +40,27 @@ function addPlaceFromInput() {
   const li = document.createElement("li");
   li.textContent = newPlace.getDetails();
 
+  // Highlight last added place
+  const lis = document.querySelectorAll("#placeList li");
+  lis.forEach(li => li.classList.remove("highlight"));
+  li.classList.add("highlight");
+
   // Show full details when clicked
   li.addEventListener("click", () => {
     const detailsDiv = document.getElementById("details");
     detailsDiv.textContent = newPlace.getDetails();
   });
+
+  // Add remove button
+  const removeBtn = document.createElement("button");
+  removeBtn.textContent = "Remove";
+  removeBtn.style.marginLeft = "10px";
+  removeBtn.onclick = (e) => {
+    e.stopPropagation();
+    places.splice(places.indexOf(newPlace), 1);
+    li.remove();
+  };
+  li.appendChild(removeBtn);
 
   document.getElementById("placeList").appendChild(li);
 
@@ -54,3 +70,11 @@ function addPlaceFromInput() {
   document.getElementById("season").value = "";
   document.getElementById("notes").value = "";
 }
+
+// Clear all places button
+document.getElementById("clearAllBtn").addEventListener("click", () => {
+  if (confirm("Are you sure you want to clear all places?")) {
+    places = [];
+    document.getElementById("placeList").innerHTML = "";
+  }
+});
