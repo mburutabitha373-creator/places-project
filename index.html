@@ -8,26 +8,25 @@
 
 <h1>Places I've Been</h1>
 
-<form id="placeForm">
-  <label for="location">Location:</label>
-  <input id="location" placeholder="Enter location">
+<label for="location">Location:</label>
+<input id="location" placeholder="Enter location">
 
-  <label for="landmarks">Landmarks:</label>
-  <input id="landmarks" placeholder="Enter landmarks">
+<label for="landmarks">Landmarks:</label>
+<input id="landmarks" placeholder="Enter landmarks">
 
-  <label for="season">Season:</label>
-  <input id="season" placeholder="Enter season">
+<label for="season">Season:</label>
+<input id="season" placeholder="Enter season">
 
-  <label for="notes">Notes:</label>
-  <input id="notes" placeholder="Enter notes">
+<label for="notes">Notes:</label>
+<input id="notes" placeholder="Enter notes">
 
-  <button type="button" onclick="addPlaceFromInput()">Add Place</button>
-</form>
+<button onclick="addPlaceFromInput()">Add Place</button>
 
 <h2>My Places</h2>
 <ul id="placeList"></ul>
 
-<script src="script.js"></script>
+<div id="details"></div>
 
+<script src="script.js"></script>
 </body>
 </html>
