@@ -1,19 +1,26 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: #f4f4f4;
   padding: 20px;
+  text-align: center;
+  color: gray;
 }
+
 
 h1 {
   color: grey;
 }
 
+
 input {
   display: block;
   margin: 8px 0;
   padding: 8px;
   width: 250px;
+  border: 1px solid white;
+  border-radius: 4px;
 }
+
 
 button {
   padding: 8px 12px;
@@ -21,14 +28,18 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 button:hover {
   background-color: greenyellow;
 }
 
+
 ul {
   margin-top: 15px;
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
@@ -38,50 +49,6 @@ li {
   border-radius: 4px;
 }
 
-#details {
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-
-h1 {
-  color: #333;
-}
-
-input {
-  display: block;
-  margin: 8px 0;
-  padding: 8px;
-  width: 250px;
-}
-
-button {
-  padding: 8px 12px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-ul {
-  margin-top: 15px;
-}
-
-li {
-  background: white;
-  padding: 8px;
-  margin: 5px 0;
-  border-radius: 4px;
-}
 
 #details {
   margin-top: 15px;
