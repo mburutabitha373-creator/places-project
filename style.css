@@ -1,12 +1,12 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: white;
   padding: 20px;
 }
 
 h1 {
-  color: #333;
+  color: grey;
 }
 
 input {
@@ -18,14 +18,14 @@ input {
 
 button {
   padding: 8px 12px;
-  background-color: #4CAF50;
+  background-color: greenyellow;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: greenyellow;
 }
 
 ul {
