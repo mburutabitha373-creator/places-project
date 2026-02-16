@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              // Constructor for a Place
-=======
->>>>>>> 0344b57 (Update README, script, and style)
+  // Constructor for a Place
 function Place(location, landmarks, season, notes) {
   this.location = location;
   this.landmarks = landmarks;
@@ -28,9 +24,15 @@ function addPlaceFromInput() {
   const season = document.getElementById("season").value;
   const notes = document.getElementById("notes").value;
 
-  // Simple validation
-  if (location === "" || landmarks === "") {
+  // Improved validation (trim whitespace)
+  if (location.trim() === "" || landmarks.trim() === "") {
     alert("Please enter at least location and landmarks");
+    return;
+  }
+
+  // Prevent duplicate locations + landmarks
+  if (places.some(p => p.location === location && p.landmarks === landmarks)) {
+    alert("This place is already added!");
     return;
   }
 
@@ -40,7 +42,7 @@ function addPlaceFromInput() {
   // Store in array
   places.push(newPlace);
 
-  // Create list item showing FULL details
+  // Create list item showing full details
   const li = document.createElement("li");
   li.textContent = newPlace.getDetails();
 
@@ -53,10 +55,3 @@ function addPlaceFromInput() {
   document.getElementById("season").value = "";
   document.getElementById("notes").value = "";
 }
-
-<<<<<<< HEAD
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              // Constructor for a Place
-=======
-
-
->>>>>>> 0344b57 (Update README, script, and style)
