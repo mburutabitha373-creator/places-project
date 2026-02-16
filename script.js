@@ -55,3 +55,7 @@ function addPlaceFromInput() {
   document.getElementById("season").value = "";
   document.getElementById("notes").value = "";
 }
+
+
+
+
