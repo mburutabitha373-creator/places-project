@@ -1,27 +1,19 @@
-
 body {
   font-family: Arial, sans-serif;
-  background-color: brown;
+  background-color: white;
   padding: 20px;
-  text-align: center;
-  color: wheat;
 }
-
 
 h1 {
-  color: white;
+  color: black;
 }
-
 
 input {
   display: block;
   margin: 8px 0;
   padding: 8px;
   width: 250px;
-  border: 1px solid white;
-  border-radius: 4px;
 }
-
 
 button {
   padding: 8px 12px;
@@ -29,27 +21,23 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
 }
 
 button:hover {
   background-color: greenyellow;
 }
 
-
 ul {
   margin-top: 15px;
-  list-style-type: none;
-  padding: 0;
 }
 
 li {
-  background: black;
+  background: white;
   padding: 8px;
   margin: 5px 0;
   border-radius: 4px;
+  cursor: pointer;
 }
-
 
 #details {
   margin-top: 15px;
