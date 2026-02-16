@@ -78,3 +78,4 @@ document.getElementById("clearAllBtn").addEventListener("click", () => {
     document.getElementById("placeList").innerHTML = "";
   }
 });
+
