@@ -87,3 +87,4 @@ console.log(places.length); // Expected: 2
 
 This project is free to use and modify for learning purposes.
 MIT License © 2026 Tabitha Mburu
+
