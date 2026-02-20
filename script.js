@@ -1,4 +1,4 @@
- // Constructor for a Place
+// Constructor for a Place
 function Place(location, landmarks, season, notes) {
   this.location = location;
   this.landmarks = landmarks;
@@ -6,7 +6,7 @@ function Place(location, landmarks, season, notes) {
   this.notes = notes;
 }
 
-// Prototype method to get place details
+// Prototype method to get place details as a single string
 Place.prototype.getDetails = function() {
   return `${this.location} - ${this.landmarks} - ${this.season} - ${this.notes}`;
 };
@@ -36,19 +36,24 @@ function addPlaceFromInput() {
   const newPlace = new Place(location, landmarks, season, notes);
   places.push(newPlace);
 
-  // Display in the list
+  // Create list item
   const li = document.createElement("li");
-  li.textContent = newPlace.getDetails();
+  li.textContent = newPlace.getDetails(); // now shows full details
 
   // Highlight last added place
   const lis = document.querySelectorAll("#placeList li");
   lis.forEach(li => li.classList.remove("highlight"));
   li.classList.add("highlight");
 
-  // Show full details when clicked
+  // Show full details when clicked (optional, keeps #details div)
   li.addEventListener("click", () => {
     const detailsDiv = document.getElementById("details");
-    detailsDiv.textContent = newPlace.getDetails();
+    detailsDiv.innerHTML = `
+      <strong>Location:</strong> ${newPlace.location} <br>
+      <strong>Landmarks:</strong> ${newPlace.landmarks} <br>
+      <strong>Season:</strong> ${newPlace.season} <br>
+      <strong>Notes:</strong> ${newPlace.notes}
+    `;
   });
 
   // Add remove button
@@ -59,6 +64,7 @@ function addPlaceFromInput() {
     e.stopPropagation();
     places.splice(places.indexOf(newPlace), 1);
     li.remove();
+    document.getElementById("details").textContent = "";
   };
   li.appendChild(removeBtn);
 
@@ -76,6 +82,6 @@ document.getElementById("clearAllBtn").addEventListener("click", () => {
   if (confirm("Are you sure you want to clear all places?")) {
     places = [];
     document.getElementById("placeList").innerHTML = "";
+    document.getElementById("details").textContent = "";
   }
 });
-
